@@ -1,8 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const router = require('./router')
 const config = require('./config')
 
 const app = express()
+app.use(cors())
 
 app.set('x-powered-by', false) // Remove unnecessary header data
 app.use(express.json())
