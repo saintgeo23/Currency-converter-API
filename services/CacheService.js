@@ -32,6 +32,10 @@
      return this.instance.set(key, value, ttl)
    }
 
+   /**
+    * Получить значение из кеша
+    * @param {string} key :: Ключ
+    */
    get(key) {
      if (key === undefined) {
        throw new Error('Необходимо указать ключ')
@@ -40,6 +44,10 @@
      return this.instance.get(key)
    }
 
+    /**
+    * Удалить значение из кеша
+    * @param {string} key :: Ключ
+    */
    del(key) {
      if (key === undefined) {
        throw new Error('Необходимо указать ключ')
@@ -48,6 +56,9 @@
      return this.instance.del(key)
    }
 
+    /**
+    * Очистить кеш
+    */
    reset() {
      return this.instance.flushAll()
    }
