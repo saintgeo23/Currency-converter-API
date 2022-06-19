@@ -94,6 +94,7 @@ class DataService {
 
     return JSON.parse(pairs)
   }
+
   /**
     * Получить курс валютной пары
     * @param {string} base :: базовая валюта
